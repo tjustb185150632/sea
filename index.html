@@ -1,13 +1,105 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>我的第一个网页</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with 海星</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
 </head>
+
 <body>
-    <h1>欢迎来到我的网站</h1>
-    <p>这是一个段落。</p>
-    <a href="https://www.example.com">这是一个链接</a>
+<!-- <embed src="http://p3qhnc0eg.bkt.clouddn.com/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
+<embed src="http://other.web.ri01.sycdn.kuwo.cn/resource/n3/19/68/2405391895.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+        	我对海星小姐的钟情<br />
+            远非简单喜欢二字所能概括</span><br />
+	每当我望向你<br />
+            <span class="keyword">眼中尽是无法掩饰的温柔</span><br /><br />
+	
+            每一次相遇<br />
+           都如同繁星点缀夜空<br />
+            <span class="keyword">令人目不转睛</span><br /><br />
+
+            这种感觉<br />
+            真的是<br />
+             <span class="keyword">太好了</span><br /><br />
+
+            两年的时光飞逝<br />
+            <span class="keyword">我们的爱却愈发深厚</span><br /><br />
+	愿这份情长久<br />
+            <span class="keyword">如星光永恒</span><br /><br />
+
+             <hr />
+   			<span class="keyword">I want to say:</span><br />
+			海星<br />
+            <span class="keyword"> I love you! </span><br />
+            -- 白色<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					         相遇，相识，相恋
+					<div id="elapseClock"></div>
+				</div>
+<!--			<div id="loveu">
+					<br/>
+					<div class="signature">- 白色</div>
+				</div>
+-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date('2022.3.5');
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 29000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<p>Made for 海星, made by 白色</p>
+<p>Copyright © 2024. All Rights Reserved. Designed by 白色</p>
+</div>
 </body>
 </html>
